@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { AppProps } from 'next/app'
+import '@common/styles/globals.scss'
 
 // LINK
 import { storeWrapper } from '@store/store'

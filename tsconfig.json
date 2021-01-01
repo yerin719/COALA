@@ -40,6 +40,6 @@
     "**/*.ts",
     "**/*.tsx",
     "src/styles/main.styles.js",
-    "src/common/config.js"
+    "src/common/env"
   ]
 }
