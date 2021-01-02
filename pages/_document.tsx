@@ -48,8 +48,13 @@ export default class CustomDocument extends Document<{
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Html>
-          <Head>{/* your head if needed */}</Head>
+        <Html lang="en">
+          <Head>
+            <script
+              type="text/javascript"
+              src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.KAKAO_KEY}&libraries=services`}
+            />
+          </Head>
           <body>
             <div
               dangerouslySetInnerHTML={{ __html: this.props.spriteContent }}

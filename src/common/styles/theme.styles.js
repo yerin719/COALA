@@ -1,7 +1,7 @@
 import { css } from 'styled-components'
 
 const theme = {
-  primaryColor: '#fe5131',
+  primaryColor: '#309975',
   subColor: '#59C3C3',
   borderColor: '#ddd',
   borderSet: '1px solid #ddd',

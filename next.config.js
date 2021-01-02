@@ -3,9 +3,13 @@ const {
   PHASE_PRODUCTION_BUILD,
 } = require('next/constants')
 
+const withImages = require('next-images')
+const Dotenv = require('dotenv-webpack')
+
 const getBuildConfig = () => {
   const path = require('path')
   const postcssPresetEnv = require('postcss-preset-env')
+
   const postcssPresetEnvOptions = {
     features: {
       'custom-media-queries': true,
@@ -46,6 +50,7 @@ const getBuildConfig = () => {
           },
         ],
       })
+      config.plugins.push(new Dotenv({ silent: true }))
       return config
     },
   }
@@ -55,5 +60,5 @@ const getBuildConfig = () => {
 module.exports = (phase) => {
   const shouldAddBuildConfig =
     phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD
-  return shouldAddBuildConfig ? getBuildConfig() : {}
+  return shouldAddBuildConfig ? withImages(getBuildConfig()) : {}
 }
