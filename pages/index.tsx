@@ -1,11 +1,19 @@
-import Link from 'next/link'
-import s from '@styles/main.styles'
 import Navbar from '../src/components/nav/navbar'
+import { Banner } from "@components/banner" 
+import { MainChart } from "@components/mainchart/maincharts" 
+import { Contents } from "@components/mainComtents/contentsSection"
+import { Topic } from "@components/topic/topicSection"
+import {Footer} from "@components/footer"
 
 const HomePage = () => {
   return (
     <main>
       <Navbar />
+      <Banner bannerImage="images/5.png"></Banner>
+      <MainChart />
+      <Contents />
+      <Topic />
+      <Footer footerImage="images/footer.png"/>
     </main>
   )
 }
