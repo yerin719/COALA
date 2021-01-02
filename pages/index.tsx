@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import s from '@styles/main.styles'
+import Navbar from '../src/components/nav/navbar'
 
 const HomePage = () => {
   return (
     <main>
-      <s.Title>Hello, world!</s.Title>
-      <Link href={'/counter'}>
-        <a>redux counter</a>
-      </Link>
+      <Navbar />
     </main>
   )
 }
